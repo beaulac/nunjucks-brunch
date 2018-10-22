@@ -15,8 +15,9 @@
     "template",
     "render"
   ],
-  "main": "./src/index.coffee",
+  "main": "./lib/index.js",
   "scripts": {
+    "build": "coffee --compile --output lib src",
     "test": "mocha tests/test.coffee --compilers coffee:coffee-script/register",
     "coverage": "mocha tests/test.coffee --require coffee-coverage/register --compilers coffee:coffee-script/register --reporter mocha-lcov-reporter > lcov.info"
   },
